@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils3.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cefelix <cefelix@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aliberal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 14:15:49 by cefelix           #+#    #+#             */
-/*   Updated: 2024/10/06 15:09:13 by cefelix          ###   ########.fr       */
+/*   Updated: 2024/10/08 18:02:28 by aliberal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 t_node	*ft_stack_get_top(t_node *list)
 {

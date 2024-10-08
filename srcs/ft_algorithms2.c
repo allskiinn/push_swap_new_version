@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_algorithms2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cefelix <cefelix@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aliberal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 14:15:03 by cefelix           #+#    #+#             */
-/*   Updated: 2024/10/07 11:30:50 by cefelix          ###   ########.fr       */
+/*   Updated: 2024/10/08 18:03:00 by aliberal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	ft_get_best_option(t_node **a, int b)
 {

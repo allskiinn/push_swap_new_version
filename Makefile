@@ -1,40 +1,61 @@
-SRCS	= main.c ft_utils.c ft_utils2.c ft_utils3.c ft_checks.c ft_checks2.c ft_algorithms1.c ft_algorithms2.c  ft_algorithms3.c ft_swap.c ft_rotate.c ft_push.c
+CLEAR	= 	clear
+RESET	:= \033[0m
+GREEN	=	\e[32m
 
-SRC_DIR = sources/
-OBJS	:= $(SRCS:%.c=%.o)
-SRC = $(addprefix $(SRC_DIR), $(SRCS))
+SRCS	=	./srcs/main.c \
+			./srcs/ft_utils.c \
+			./srcs/ft_utils2.c \
+			./srcs/ft_utils3.c \
+			./srcs/ft_checks.c \
+			./srcs/ft_checks2.c \
+			./srcs/ft_algorithms1.c \
+			./srcs/ft_algorithms2.c \
+			./srcs/ft_algorithms3.c \
+			./srcs/ft_swap.c \
+			./srcs/ft_rotate.c \
+			./srcs/ft_push.c
 
-NAME	= push_swap
+OBJSDIR = 	objects
+OBJS	= 	$(addprefix $(OBJSDIR)/,$(SRCS:.c=.o))
 
-CC		= gcc -g
-RM		= rm -f
+NAME	= 	push_swap
 
-CFLAGS 	= -Wall -Wextra -Werror -g
+CC		= 	gcc -g
+RM		= 	rm -rf
+
+CFLAGS 	= 	-Wall -Wextra -Werror -g
 
 all:		${NAME}
 
-%.o:	$(SRC_DIR)%.c
-		${CC} ${CFLAGS} -Ilibft -Iprintf -c $? -o $@
-
 ${NAME}:	${OBJS}
-		@make -C libft
-		@make -C printf
-		${CC} ${CFLAGS} $^ -Llibft -lft -Lprintf -lftprintf -o ${NAME}
+			@make -C libft
+			@make -C printf
+			${CC} ${CFLAGS} $^ -Llibft -lft -Lprintf -lftprintf -o ${NAME}
+			$(CLEAR)
+			@echo "Compilando a biblioteca libft"
+			@echo "Compilando a biblioteca printf"
+			@echo "$(GREEN)Projecto compilado com sucesso...$(RESET)"
 
-libft:
-		make -C libft
-
-printf:
-		make -C printf
+$(OBJSDIR)/%.o: %.c
+			mkdir -p $(@D)
+			$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 			make clean -C libft
 			make clean -C printf
-			${RM} ${OBJS}
+			${RM} ${OBJSDIR}
+			$(CLEAR)
+			@echo "$(GREEN)objectos removidos com sucesso$(RESET)"
 
 fclean:		clean
 			${RM} ${NAME}
+			$(CLEAR)
+			@echo "$(GREEN)Tudo removido com sucesso...$(RESET)"
 
 re:			fclean all
+			$(CLEAR)
+			@echo "$(GREEN)Projecto recompilado com sucesso...$(RESET)"
 
 .PHONY:		libft printf
+
+.SILENT:

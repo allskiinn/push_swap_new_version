@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_algorithms1.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cefelix <cefelix@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aliberal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 14:14:56 by cefelix           #+#    #+#             */
-/*   Updated: 2024/10/07 11:23:19 by cefelix          ###   ########.fr       */
+/*   Updated: 2024/10/08 18:03:04 by aliberal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	two_args_alg(t_node **a)
 {

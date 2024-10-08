@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_checks2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cefelix <cefelix@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aliberal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 10:50:04 by cefelix           #+#    #+#             */
-/*   Updated: 2024/10/07 13:04:38 by cefelix          ###   ########.fr       */
+/*   Updated: 2024/10/08 18:02:52 by aliberal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	ft_check_is_num(char *str)
 {
